@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject, zip, combineLatest, forkJoin, withLatestFrom } from 'rxjs';
+import { Subject, zip, combineLatest, forkJoin } from 'rxjs';
+import { withLatestFrom } from 'rxjs/operators';
 
 
 @Component({
