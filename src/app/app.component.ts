@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,13 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class AppComponent implements OnInit {
 
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
+    // this.router.events
+    //   .pipe(filter(event => event instanceof NavigationEnd))
+    //   .subscribe(console.log);
   }
 
 }
