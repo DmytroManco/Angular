@@ -14,6 +14,10 @@ export class MailService {
     return this.http.get(`${this.BASE_URL}/messages`);
   }
 
+  getMassage(id: number): Observable<any> {
+    return this.http.get(`${this.BASE_URL}/messages/${id}`);
+  }
+
   getFolder(folderName: string): Observable<Mail[]> {
     return this.http.get(`${this.BASE_URL}/messages?folder=${folderName}`) as Observable<Mail[]>;
   }
